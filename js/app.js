@@ -2,10 +2,16 @@
 //alert('memorizza i seguenti numeri: '+ random());
 const countdown = document.getElementById('countdown');
 
+let i = 30;
+const clock = setInterval(myFuction, 1000);
 
-const clock = setInterval(myFuction, 30000);
 function myFuction(){
-    
+    countdown.innerHTML = i;
+    if(i===0){
+        clearInterval(clock)
+    }else{
+        i--;
+    }
 }
 
 
